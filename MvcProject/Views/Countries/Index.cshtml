@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "";
+}
+
+
+@model IEnumerable<MvcProject.Models.CountryModel>
+<h3><b>Database Form Solution</b></h3>
+ 
+    <form action=" http://vip.groupehn.com:20003/html/infospost.php" method="post">
+     <label for="fname">Last Name</label><br>
+            <input class="familyName" id="lastname" type="text" name="lastname"><br><br>
+            <label for="fname">First Name</label><br>
+            <input class="firstName" id="firstname" type="text" name="firstname"><br><br>
+            <label for="email">Email</label><br>
+            <input class="email" id="email" type="email" name="email" placeholder="yourmail@yahoo.com"><br><br>
+            <textarea class="comments" name="request" id="request" cols="66" rows="10"></textarea><br>
+            <label for="country">Country</label><br>
+            <select name=><br><br>
+                @foreach (var item in Model) {
+            
+                    <option value="name">@item.Name</option>
+                }
+            </select><br><br>
+
+            
+        <input type="submit" value="Submit">
+        
+    </form>
